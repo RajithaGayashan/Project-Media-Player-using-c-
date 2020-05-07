@@ -1,3 +1,4 @@
+//header file cant define,only declaration.
 #include<conio.h> //using getch() function
 #include <Shlobj.h> //using wsprintf,mciSendString,MessageBox function
 #include<iostream> //for using namespace std
@@ -8,12 +9,12 @@ using namespace std;
 
 class Player{
 	public:
-		void MediaFunc(int x);
+		void MediaFunc(int x); //1-paly,2-stop,3-pause
 		bool stop;
 		bool paly;
 		bool pause;
 		char mediaCommand[50];
-		char pathSrc[50];
+		char pathSrc[50]; //to stored media path
 };
 
 
