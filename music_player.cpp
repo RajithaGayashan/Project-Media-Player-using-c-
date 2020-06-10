@@ -26,4 +26,12 @@ void Player::MediaFunc(int x){
 			play=false;
 			break;
 	}
+	
+	if(msiSendString(mediaCommand,NULL,0,NULL)!=0){
+		system("cls");
+		MessageBox(NULL,"Sorry,can't paly your file","HALT!",0);
+		pause=false;
+		stop=false;
+		play=false;
+	}
 }
