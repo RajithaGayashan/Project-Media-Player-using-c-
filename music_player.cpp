@@ -1,13 +1,18 @@
-#include "music_palyer.h"
+#include "music_player.h"
 
 void Player::MediaFunc(int x){
 	switch(x){
-		case 1:
+		case 1://if paused or playing,no menu
 			if(pause!=true && play!=true){//condition true when stop==true 
 				cout<<"Enter the song path :  "<<endl;
 				cin>>pathSrc;
 				wsprintf(mediaCommand,"play %s",pathSrc);//wsprintf include Shlobj labrary
 				cout<<"\nPlaying..."<<endl;
+			}else{
+				if(pause){
+					cout<<"\nPlaying"<<endl;
+					wsprintf(mediaCommand,"play %s",pathSrc);
+				}
 			}
 			pause=false;
 			stop=false;
