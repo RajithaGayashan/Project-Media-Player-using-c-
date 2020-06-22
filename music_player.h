@@ -11,7 +11,7 @@ class Player{
 	public:
 		void MediaFunc(int x); //1-paly,2-stop,3-pause
 		bool stop;
-		bool paly;
+		bool play;
 		bool pause;
 		char mediaCommand[50];
 		char pathSrc[50]; //to stored media path
